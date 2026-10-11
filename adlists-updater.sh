@@ -11,7 +11,7 @@ if (( EUID != 0 )); then
 fi
 
 # check if we're actually on a pihole (and a new version at that)
-if command -v pihole > /dev/null ; then
+if ! command -v pihole > /dev/null ; then
   echo 'Error: You must run this on a pihole!' >&2
   exit 1
 fi
