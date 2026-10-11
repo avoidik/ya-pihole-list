@@ -79,14 +79,14 @@ if [[ -e "${ADLIST_LOCAL}" ]]; then
   # Store domains in database table specified by ${GRAVITY_DB_TABLE}
   # Use printf as .mode and .import need to be on separate lines
   # see https://unix.stackexchange.com/a/445615/83260
-  if output=$(printf '.timeout 30000\n.mode csv\n.import "%s" %s\n' \ "$ADLIST_TMP" "$GRAVITY_DB_TABLE" | sqlite3 -batch "$GRAVITY_DB_FILE" 2>&1); then
+  if output=$(printf '.timeout 30000\n.mode csv\n.import "%s" %s\n' "$ADLIST_TMP" "$GRAVITY_DB_TABLE" | sqlite3 -batch "$GRAVITY_DB_FILE" 2>&1); then
     status=0
   else
     status=$?
   fi
 
   # delete temporary file
-  rm -f -- "$ADLIST_TMP"
+  rm -f "$ADLIST_TMP"
 
   if (( status != 0 )); then
     printf 'Warning: Import into %s failed:\n%s\n' "$GRAVITY_DB_FILE" "$output" >&2
