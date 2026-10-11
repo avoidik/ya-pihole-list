@@ -59,7 +59,7 @@ if [[ -e "${ADLIST_LOCAL}" ]]; then
   echo "Info: Adding content of ${ADLIST_LOCAL} into gravity database"
 
   # Get MAX(id) when INSERTing into this table
-  tablerowid="$(sqlite3 ${GRAVITY_DB_FILE} \"SELECT MAX(id) FROM ${GRAVITY_DB_TABLE};\")"
+  tablerowid=$(sqlite3 "$GRAVITY_DB_FILE" "SELECT MAX(id) FROM ${GRAVITY_DB_TABLE};")
   if [[ -z "$tablerowid" ]]; then
     tablerowid=0
   fi
