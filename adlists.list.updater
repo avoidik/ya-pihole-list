@@ -26,7 +26,15 @@ https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
 https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
 # abuse.ch malicious domains + malware
 https://urlhaus.abuse.ch/downloads/hostfile/
-# osint.digitalside.it malicious domains + malware
-https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt
 # Ads, Mobile Ads, Phishing, Malvertising, Malware, Spyware, Ransomware, CryptoJacking and some Telemetry, Analytics, Tracking
 https://big.oisd.nl/
+# Tempest Solutions - Phishing
+https://raw.githubusercontent.com/Tempest-Solutions-Company/pihole_blocklists/main/phishing.txt
+# Tempest Solutions - Malware
+https://raw.githubusercontent.com/Tempest-Solutions-Company/pihole_blocklists/main/malware.txt
+# Tempest Solutions - C2 Servers
+https://raw.githubusercontent.com/Tempest-Solutions-Company/pihole_blocklists/main/c2_servers.txt
+# Tempest Solutions - Banking Trojan
+https://raw.githubusercontent.com/Tempest-Solutions-Company/pihole_blocklists/main/banking_trojan.txt
+# Tempest Solutions - All Malicious
+https://raw.githubusercontent.com/Tempest-Solutions-Company/pihole_blocklists/main/all_malicious.txt
